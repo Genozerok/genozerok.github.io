@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashley Jimenez Gomez | Web Developer for Small Businesses</title>
+<meta name="description" content="I build fast, mobile-friendly websites for small businesses in the U.S. Based in Costa Rica, working on U.S. hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F6FA; --surface:#FFFFFF; --ink:#12213B; --muted:#4A5A74;
+  --line:#D5DEE9; --accent:#FFC247; --accent-ink:#12213B; --link:#0B5CAD;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1727; --surface:#16233A; --ink:#EAF0F8; --muted:#A5B3C8;
+    --line:#2A3A55; --accent:#FFC247; --accent-ink:#12213B; --link:#7DB7F5;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;line-height:1.1;margin:0}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav a{margin-left:1.25rem;color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--ink)}
+.hero{padding:4rem 0 3.5rem;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800;max-width:15ch;letter-spacing:-.02em}
+.hero h1 mark{background:var(--accent);color:var(--accent-ink);padding:0 .15em;border-radius:.12em}
+.hero p{max-width:38rem;font-size:1.2rem;color:var(--muted);margin:1.5rem 0 2rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--ink);margin:0 .6rem .6rem 0}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:4rem 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:2rem}
+.services{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.services h3{font-size:1.25rem;margin-bottom:.5rem}
+.services p{margin:0;color:var(--muted)}
+.project{display:grid;gap:2rem;grid-template-columns:1.2fr 1fr;align-items:center;margin-bottom:3.5rem}
+.project:nth-child(even) .frame{order:2}
+.frame{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;overflow:hidden}
+.frame .bar{display:flex;gap:.4rem;padding:.6rem .8rem;border-bottom:1px solid var(--line)}
+.frame .bar i{width:.65rem;height:.65rem;border-radius:50%;background:var(--line)}
+.frame img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--line)}
+.project h3{font-size:1.7rem;margin-bottom:.5rem}
+.project .tag{display:inline-block;font-size:.9rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:2rem;padding:.1rem .7rem;margin-bottom:.8rem}
+.project p{color:var(--muted);margin:.4rem 0 1rem}
+.project .tools{font-size:.95rem;color:var(--ink);font-weight:600}
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
+.steps li{counter-increment:s;padding-top:1rem;border-top:3px solid var(--accent)}
+.steps li::before{content:counter(s) ".";font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;display:block;margin-bottom:.3rem}
+.steps strong{display:block;margin-bottom:.2rem}
+.steps span{color:var(--muted)}
+.contact{border-bottom:0}
+.contact p{max-width:36rem;color:var(--muted);font-size:1.15rem;margin:0 0 1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (max-width:48rem){
+  .project{grid-template-columns:1fr}
+  .project:nth-child(even) .frame{order:0}
+  nav a{margin-left:.8rem}
+  .hero{padding-top:2.5rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Ashley Jimenez Gomez</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <h1>Websites that bring small businesses <mark>customers</mark>.</h1>
+      <p>I’m a web developer in Costa Rica, working on U.S. hours. I build fast, mobile-friendly sites for local businesses and for agencies that need extra hands.</p>
+      <a class="btn primary" href="#contact">Start a project</a>
+      <a class="btn ghost" href="#work">See my work</a>
+    </div>
+
+    <section aria-labelledby="services-title">
+      <h2 id="services-title">What I do</h2>
+      <div class="services">
+        <div>
+          <h3>New websites</h3>
+          <p>Clear pages for restaurants, clinics, contractors and shops, built to load fast and look right on any phone.</p>
+        </div>
+        <div>
+          <h3>Redesigns</h3>
+          <p>I update old or slow sites so visitors can find your phone number, hours and quote form in seconds.</p>
+        </div>
+        <div>
+          <h3>Support for agencies</h3>
+          <p>Need a developer for overflow projects? I work under your brand and follow your deadlines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Selected work</h2>
+
+      <article class="project">
+        <div class="frame">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="images/project1.png" alt="Home page of the Lone Star Roofing sample website" loading="lazy">
+        </div>
+        <div>
+          <span class="tag">Concept project</span>
+          <h3>Lone Star Roofing</h3>
+          <p>A website for a roofing contractor in Texas, with a service list, photo gallery and a quote request form that is easy to find on mobile.</p>
+          <div class="tools">HTML, CSS, JavaScript</div>
+          <p><a href="#">View live site</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="frame">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="images/project2.png" alt="Home page of the Maple and Pine Bistro sample website" loading="lazy">
+        </div>
+        <div>
+          <span class="tag">Concept project</span>
+          <h3>Maple &amp; Pine Bistro</h3>
+          <p>A restaurant site with the menu, opening hours, location map and a reservation button right at the top.</p>
+          <div class="tools">WordPress, Elementor</div>
+          <p><a href="#">View live site</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="frame">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="images/project3.png" alt="Home page of the Bright Smile Dental sample website" loading="lazy">
+        </div>
+        <div>
+          <span class="tag">Concept project</span>
+          <h3>Bright Smile Dental</h3>
+          <p>A clean site for a dental clinic that explains treatments in plain language and makes booking an appointment simple.</p>
+          <div class="tools">Webflow</div>
+          <p><a href="#">View live site</a></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="process" aria-labelledby="process-title">
+      <h2 id="process-title">How we work together</h2>
+      <ol class="steps">
+        <li><strong>We talk</strong><span>You tell me what your business needs and who your customers are.</span></li>
+        <li><strong>I build</strong><span>I send a first version fast, so you can react to something real.</span></li>
+        <li><strong>We test</strong><span>I check it on phones and computers, and real people try it before launch.</span></li>
+        <li><strong>You launch</strong><span>I hand over your files and logins, and I stay available for updates.</span></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Let’s talk about your website</h2>
+      <p>Send me a short message about your business and what you need. I usually reply within one business day.</p>
+      <a class="btn primary" href="mailto:ajjimenezgz@outlook.com">ajjimenezgz@outlook.com</a>
+      <a class="btn ghost" href="https://wa.me/50686528782">Message on WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>© 2026 Ashley Jimenez Gomez. Based in Costa Rica.</footer>
+</div>
+</body>
+</html>
